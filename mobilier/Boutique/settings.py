@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+yx^v)^g-dkp_wieimwo7hrr8^r9tn!-$1c4us_8*4_jge8x$^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS=[
     "newbackendimmob-production.up.railway.app",
@@ -32,7 +32,7 @@ ALLOWED_HOSTS=[
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",
     "http://127.0.0.1:5174",
-     "https://ton-site.vercel.app"
+    "https://immob-b6tkny3va-kevinemafouomenekenne-2584s-projects.vercel.app/"
 ]
 
 
