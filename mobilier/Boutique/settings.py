@@ -169,3 +169,5 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
+
