@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+yx^v)^g-dkp_wieimwo7hrr8^r9tn!-$1c4us_8*4_jge8x$^
 DEBUG = False
 
 ALLOWED_HOSTS=[
-    "immob.alwaysdata.net"
+    ".onrender.com",
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -69,6 +69,7 @@ GOOGLE_CLIENT_SECRET = "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"
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -100,36 +101,27 @@ WSGI_APPLICATION = 'Boutique.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-import os
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-
-        'NAME': os.environ.get(
-            'DB_NAME'
-        ),
-
-        'USER': os.environ.get(
-            'DB_USER'
-        ),
-
-        'PASSWORD': os.environ.get(
-            'DB_PASSWORD'
-        ),
-
-        'HOST': os.environ.get(
-            'DB_HOST'
-        ),
-
-        'PORT': os.environ.get(
-            'DB_PORT',
-            '3306'
-        ),
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "immob_db",
+        "USER": "immob_user",
+        "PASSWORD": "Immob@2026",
+        "HOST": "mysql-immob.alwaysdata.net",
+        "PORT": "3306",
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'immob',
+#         'USER': 'root',
+#         'PASSWORD':'',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
@@ -173,3 +165,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL publique pour accéder à ces fichiers
 MEDIA_URL = '/media/'
+
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
