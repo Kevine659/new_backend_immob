@@ -32,7 +32,7 @@ ALLOWED_HOSTS=[
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5174",
     "http://127.0.0.1:5174",
-    "https://immob-b6tkny3va-kevinemafouomenekenne-2584s-projects.vercel.app/"
+    "https://immob-b6tkny3va-kevinemafouomenekenne-2584s-projects.vercel.app"
 ]
 
 
