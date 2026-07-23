@@ -30,7 +30,7 @@ class GoogleLoginView(APIView):
             'code': code,
             'client_id': settings.GOOGLE_CLIENT_ID,
             'client_secret': settings.GOOGLE_CLIENT_SECRET,
-            'redirect_uri': 'http://localhost:5174/auth/google/callback', # Doit être identique à la console Google
+            'redirect_uri': 'https://immob-kappa.vercel.app/auth/google/callback', # Doit être identique à la console Google
             'grant_type': 'authorization_code'
         }
 
