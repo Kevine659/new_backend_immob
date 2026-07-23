@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+yx^v)^g-dkp_wieimwo7hrr8^r9tn!-$1c4us_8*4_jge8x$^
 DEBUG = False
 
 ALLOWED_HOSTS=[
-    ".onrender.com",
+    "newbackendimmob-production.up.railway.app",
 ]
 
 CORS_ALLOWED_ORIGINS = [
